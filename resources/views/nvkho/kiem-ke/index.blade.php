@@ -21,6 +21,18 @@
     <p style="font-size: 13px; color: #6B5559; margin: 0;">Phiếu được giao cho bạn hoặc chưa giao.</p>
   </div>
 
+  @if(session('success'))
+    <div style="padding: 12px 18px; border-radius: 8px; background: #DEF7EC; border: 1px solid #BCF0DA; color: #03543F; font-size: 14px;">
+      {{ session('success') }}
+    </div>
+  @endif
+
+  @if(session('error'))
+    <div style="padding: 12px 18px; border-radius: 8px; background: #FDE8E8; border: 1px solid #F8B4B4; color: #9B1C1C; font-size: 14px;">
+      {{ session('error') }}
+    </div>
+  @endif
+
   {{-- Tabs --}}
   <div style="display: flex; flex-wrap: wrap; gap: 8px;">
     @php

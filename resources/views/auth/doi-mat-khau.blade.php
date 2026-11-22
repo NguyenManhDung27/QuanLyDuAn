@@ -9,6 +9,18 @@
     <p class="page-desc">Mở từ nút Đổi mật khẩu trên header. Màn này giống nhau cho mọi vai trò.</p>
   </div>
 
+  @if(session('success'))
+    <div class="alert-success">
+      {{ session('success') }}
+    </div>
+  @endif
+
+  @if(session('error'))
+    <div class="alert-danger">
+      {{ session('error') }}
+    </div>
+  @endif
+
   @if($errors->any())
     <div class="alert-danger">
       @foreach($errors->all() as $error)
