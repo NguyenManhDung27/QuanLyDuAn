@@ -26,6 +26,26 @@ use Illuminate\View\View;
 class DashboardController extends Controller
 {
     /**
+     * Lấy tóm tắt các việc cần xử lý cho chuông thông báo (Live Polling)
+     */
+    public function getNotificationSummary(): \Illuminate\Http\JsonResponse
+    {
+        $user = Auth::user();
+        if (!$user) {
+            return response()->json(['count' => 0, 'cards' => []]);
+        }
+
+        $data = NotificationService::getRoleActionItems($user);
+        $counts = $data['counts'] ?? [];
+        $cards = array_values(array_filter($data['cards'] ?? [], fn($c) => ($c['count'] ?? 0) > 0));
+
+        return response()->json([
+            'count' => (int) array_sum($counts),
+            'cards' => $cards,
+        ]);
+    }
+
+    /**
      * Dashboard fallback / redirect
      */
     public function index()

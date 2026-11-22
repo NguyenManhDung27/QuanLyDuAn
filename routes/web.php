@@ -69,6 +69,9 @@ Route::middleware('auth')->group(function () {
 
     // Dashboard chung (fallback)
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+    // API chuông thông báo (Live polling)
+    Route::get('/thong-bao/dem', [DashboardController::class, 'getNotificationSummary'])->name('thong-bao.dem');
 });
 
 // =========================================================================

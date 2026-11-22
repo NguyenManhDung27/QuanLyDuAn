@@ -400,5 +400,111 @@ class DatabaseSeeder extends Seeder
                 $tk
             );
         }
+
+        // 9. Dữ liệu chứng từ mẫu chờ xử lý (Action Items cho Demo chuông thông báo)
+        // 9.1. Đề xuất chờ duyệt cho Kế toán (ketoan01: chuông +1)
+        $ddh = \App\Models\DonDatHang::updateOrCreate(
+            ['Ma_don_dat_hang' => 'DDH-2026-0001'],
+            [
+                'Ma_ncc' => 'NCC001',
+                'Ma_kho' => 'HN',
+                'Ma_nguoi_lap' => 'ND0002',
+                'Ngay_lap' => date('Y-m-d'),
+                'Ngay_du_kien_nhan_du' => date('Y-m-d', strtotime('+7 days')),
+                'Trang_thai' => 'Chờ phê duyệt',
+                'Tong_gia_tri' => 19200000,
+            ]
+        );
+        \App\Models\ChiTietDonDatHang::updateOrCreate(
+            ['Ma_don_dat_hang' => 'DDH-2026-0001', 'Ma_san_pham' => 'SP0001'],
+            [
+                'So_luong_dat' => 24,
+                'Don_gia_mua' => 800000,
+            ]
+        );
+
+        // 9.1b. Đơn chưa gửi NCC cho Quản lý kho (qlkho.hn: chuông +1)
+        $ddh2 = \App\Models\DonDatHang::updateOrCreate(
+            ['Ma_don_dat_hang' => 'DDH-2026-0002'],
+            [
+                'Ma_ncc' => 'NCC002',
+                'Ma_kho' => 'HN',
+                'Ma_nguoi_lap' => 'ND0002',
+                'Ngay_lap' => date('Y-m-d'),
+                'Ngay_du_kien_nhan_du' => date('Y-m-d', strtotime('+10 days')),
+                'Trang_thai' => 'Chưa gửi NCC',
+                'Tong_gia_tri' => 15600000,
+            ]
+        );
+        \App\Models\ChiTietDonDatHang::updateOrCreate(
+            ['Ma_don_dat_hang' => 'DDH-2026-0002', 'Ma_san_pham' => 'SP0003'],
+            [
+                'So_luong_dat' => 20,
+                'Don_gia_mua' => 780000,
+            ]
+        );
+
+        // 9.2. Đơn bán & Phiếu xuất đang chuẩn bị hàng (Kinh doanh: +1, Nhân viên kho: +1)
+        $dhb = \App\Models\DonHangBan::updateOrCreate(
+            ['Ma_don_hang_ban' => 'DB-2026-0001'],
+            [
+                'Ma_khach_hang' => 'KH0001',
+                'Ma_kho' => 'HN',
+                'Ma_nguoi_lap' => 'ND0005',
+                'Thoi_diem_xac_nhan' => date('Y-m-d H:i:s'),
+                'Ten_nguoi_nhan' => 'Nhà hàng Sen Tây Hồ',
+                'Sdt_nguoi_nhan' => '02437199242',
+                'Dia_chi_giao_hang' => '614 Lạc Long Quân, Tây Hồ, Hà Nội',
+                'Tong_tien_hang' => 2400000,
+                'Trang_thai' => 'Đang chuẩn bị hàng',
+            ]
+        );
+        \App\Models\ChiTietDonBan::updateOrCreate(
+            ['Ma_don_hang_ban' => 'DB-2026-0001', 'Ma_san_pham' => 'SP0001'],
+            [
+                'So_luong' => 2,
+                'Don_gia_ban' => 1200000,
+                'Chiet_khau' => 0,
+            ]
+        );
+        \App\Models\PhieuXuatKho::updateOrCreate(
+            ['Ma_phieu_xuat' => 'PX-2026-0001'],
+            [
+                'Ma_don_hang_ban' => 'DB-2026-0001',
+                'Ngay_tao' => date('Y-m-d'),
+                'Trang_thai_giao_hang' => 'Đang chuẩn bị hàng',
+            ]
+        );
+        \App\Models\ChiTietPhieuXuat::updateOrCreate(
+            [
+                'Ma_phieu_xuat' => 'PX-2026-0001',
+                'Ma_lo_phan_bo' => 'L2201',
+                'Ma_lo_thuc_xuat' => 'L2201',
+            ],
+            [
+                'So_luong' => 2,
+                'Gia_von_xuat' => 800000,
+            ]
+        );
+
+        // 9.3. Phiếu kiểm kê đang kiểm giao cho nvkho.hn (Nhân viên kho: chuông +1)
+        $pkk = \App\Models\PhieuKiemKe::updateOrCreate(
+            ['Ma_phieu_kiem_ke' => 'KK-2026-0001'],
+            [
+                'Ma_kho' => 'HN',
+                'Ma_nguoi_tao' => 'ND0002',
+                'Ma_nguoi_kiem' => 'ND0003',
+                'Thoi_diem_tao' => date('Y-m-d H:i:s'),
+                'Trang_thai' => 'Đang kiểm',
+                'Ghi_chu' => 'Kiểm kê định kỳ tháng',
+            ]
+        );
+        \App\Models\ChiTietKiemKe::updateOrCreate(
+            ['Ma_phieu_kiem_ke' => 'KK-2026-0001', 'Ma_lo' => 'L2304'],
+            [
+                'So_luong_he_thong' => 25,
+                'So_luong_thuc_te' => null,
+            ]
+        );
     }
 }
