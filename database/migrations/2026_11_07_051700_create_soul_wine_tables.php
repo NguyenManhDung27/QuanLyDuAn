@@ -129,7 +129,7 @@ return new class extends Migration
             $t->foreign('Ma_don_hang_ban')->references('Ma_don_hang_ban')->on('Don_hang_ban');
             $t->date('Ngay_tao');
             $t->string('Trang_thai_giao_hang', 30)->default('Đang chuẩn bị hàng')->index();
-            $t->string('Trang_thai_hoan_hang', 30)->default('Chưa xử lý')->index();
+            $t->string('Trang_thai_hoan_hang', 30)->nullable()->index();
             $t->string('Don_vi_van_chuyen', 100)->nullable();
             $t->string('Ma_van_don', 50)->nullable()->index();
             $this->nguoiDung($t, 'Ma_nguoi_xuat');
@@ -137,7 +137,7 @@ return new class extends Migration
             $t->dateTime('Thoi_diem_ket_qua_giao')->nullable()->index();
             $t->string('Ly_do_giao_that_bai', 1000)->nullable();
             $t->dateTime('Thoi_diem_xu_ly_hoan')->nullable();
-            $t->string('Ly_do_khong_nhap_kho', 1000)->nullable();
+            $t->string('Ghi_chu_xu_ly_hoan', 1000)->nullable();
         });
 
         Schema::create('Phieu_nhap_kho', function (Blueprint $t) {

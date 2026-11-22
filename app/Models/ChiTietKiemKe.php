@@ -21,4 +21,24 @@ class ChiTietKiemKe extends ChiTietModel
     {
         return $this->belongsTo(Lo::class, 'Ma_lo', 'Ma_lo');
     }
+
+    public function getChenhLechAttribute(): ?int
+    {
+        if ($this->So_luong_thuc_te === null) {
+            return null;
+        }
+
+        return (int) $this->So_luong_thuc_te - (int) $this->So_luong_he_thong;
+    }
+
+    public function getGiaTriChenhLechAttribute(): ?float
+    {
+        $cl = $this->chenh_lech;
+        if ($cl === null) {
+            return null;
+        }
+
+        $giaVon = $this->Gia_von_dieu_chinh ?? $this->lo?->sanPham?->Gia_von_binh_quan ?? 0;
+        return $cl * (float) $giaVon;
+    }
 }

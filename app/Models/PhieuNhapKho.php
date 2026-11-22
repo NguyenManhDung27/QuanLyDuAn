@@ -37,6 +37,11 @@ class PhieuNhapKho extends Model
         return $this->belongsTo(NguoiDung::class, 'Ma_nguoi_lap', 'Ma_nguoi_dung');
     }
 
+    public function nguoiTao(): BelongsTo
+    {
+        return $this->belongsTo(NguoiDung::class, 'Ma_nguoi_lap', 'Ma_nguoi_dung');
+    }
+
     public function chiTiets(): HasMany
     {
         return $this->hasMany(ChiTietPhieuNhap::class, 'Ma_phieu_nhap', 'Ma_phieu_nhap');

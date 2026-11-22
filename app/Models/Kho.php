@@ -10,6 +10,11 @@ class Kho extends Model
 
     protected $primaryKey = 'Ma_kho';
 
+    public function nguoiDung(): HasMany
+    {
+        return $this->hasMany(NguoiDung::class, 'Ma_kho', 'Ma_kho');
+    }
+
     public function nguoiDungs(): HasMany
     {
         return $this->hasMany(NguoiDung::class, 'Ma_kho', 'Ma_kho');

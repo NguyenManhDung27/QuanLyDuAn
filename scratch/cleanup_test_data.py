@@ -1,0 +1,18 @@
+import sqlite3
+
+con = sqlite3.connect('database/database.sqlite')
+cur = con.cursor()
+cur.execute("DELETE FROM Chi_tiet_phieu_nhap WHERE Ma_phieu_nhap LIKE '%TEST%'")
+cur.execute("DELETE FROM Phieu_nhap_kho WHERE Ma_phieu_nhap LIKE '%TEST%' OR Ma_don_dat_hang LIKE '%TEST%'")
+cur.execute("DELETE FROM Chi_tiet_don_dat_hang WHERE Ma_don_dat_hang LIKE '%TEST%'")
+cur.execute("DELETE FROM Don_dat_hang WHERE Ma_don_dat_hang LIKE '%TEST%'")
+cur.execute("DELETE FROM Chi_tiet_phieu_xuat WHERE Ma_phieu_xuat LIKE '%TEST%'")
+cur.execute("DELETE FROM Phieu_xuat_kho WHERE Ma_phieu_xuat LIKE '%TEST%'")
+cur.execute("DELETE FROM Don_hang_ban WHERE Ma_don_hang_ban LIKE '%TEST%'")
+cur.execute("DELETE FROM Chi_tiet_kiem_ke WHERE Ma_phieu_kiem_ke LIKE '%TEST%'")
+cur.execute("DELETE FROM Phieu_kiem_ke WHERE Ma_phieu_kiem_ke LIKE '%TEST%'")
+cur.execute("DELETE FROM Ton_kho WHERE Ma_lo LIKE 'L26%'")
+cur.execute("DELETE FROM Lo WHERE Ma_lo LIKE 'L26%' OR Ma_lo_ncc LIKE '%TEST%'")
+cur.execute("UPDATE San_pham SET Gia_von_binh_quan = 800000 WHERE Ma_san_pham = 'SP0001'")
+con.commit()
+print("Cleaned up test data and reset SP0001 Gia_von_binh_quan to 800000.")

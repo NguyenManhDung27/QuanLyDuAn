@@ -42,4 +42,26 @@ class PhieuKiemKe extends Model
     {
         return $this->hasMany(ChiTietKiemKe::class, 'Ma_phieu_kiem_ke', 'Ma_phieu_kiem_ke');
     }
+
+    public function getTongSoLoAttribute(): int
+    {
+        return $this->chiTiets()->count();
+    }
+
+    public function getDaDemSoLoAttribute(): int
+    {
+        return $this->chiTiets()->whereNotNull('So_luong_thuc_te')->count();
+    }
+
+    public function getSoDongLechAttribute(): ?int
+    {
+        if ($this->Trang_thai === 'Đang kiểm' && !$this->Thoi_diem_dem_xong) {
+            return null;
+        }
+
+        return $this->chiTiets()
+            ->whereNotNull('So_luong_thuc_te')
+            ->whereRaw('So_luong_thuc_te != So_luong_he_thong')
+            ->count();
+    }
 }

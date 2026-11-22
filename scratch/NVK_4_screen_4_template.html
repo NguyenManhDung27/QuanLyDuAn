@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="vi"><head>
+<meta charset="utf-8">
+<title>Nhập kho</title>
+<script src="8b3d071f-67a2-49ed-9c45-1b425fc2658c"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>/* vietnamese */
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("85e6c360-61df-4f3a-9769-84cab7a3c65a") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("90baa381-a6b3-4be5-ab94-5b777303dc5d") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("bf1d941f-f885-4453-8aac-deaf74fbc8c7") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("3af79672-d7ee-4992-82ac-981edcfe7aea") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("3a3f1a81-94b5-427a-8025-529fce3e78f8") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("8e786898-6da7-47a5-b23b-d53e5fe601f9") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("35da1e79-4489-4cbe-aa00-eac74b7b3009") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("1927644f-43db-465c-86ad-817e22aa766e") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("72b2e442-3ce8-4aec-91af-c412159befa0") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("eb35b0fe-1bd2-448a-abb9-b3eb82d3ab43") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("14443463-48ab-48ea-87af-961955a73997") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Be Vietnam Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("e69d3053-4d68-43c4-b986-12a07db37865") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v40/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKebunDTbtPY_Q.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v40/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKebunDYbtPY_Q.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v40/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKebunDZbtPY_Q.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/playfairdisplay/v40/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKebunDXbtM.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<style>
+body{margin:0;background:#FAF5F3}
+a{color:#8B1E2D}a:hover{color:#5E1320}
+</style>
+</helmet>
+<div style="min-height: 1300px; display: flex; flex-direction: column; font-family: 'Be Vietnam Pro', sans-serif; color: #241417; background: #FAF5F3">
+  <header style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 14px 28px; background: #FFFFFF; border-bottom: 1px solid #EADFDC">
+    <div style="display: flex; align-items: center; gap: 12px">
+      <img src="6f9e4cff-44e7-4df5-93f1-1944098dbf8c" alt="" width="34" height="45" style="display: block; width: 34px; height: 45px">
+      <div style="display: flex; flex-direction: column">
+        <span style="font-family: 'Playfair Display', serif; font-size: 20px; color: #6E1423; letter-spacing: 0.04em">SOUL WINE</span>
+        <span style="font-size: 12px; color: #6B5559">Hệ thống quản lý kho</span>
+      </div>
+    </div>
+    <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap">
+      <a href="NVK_TrangChu.dc.html" aria-label="Việc cần xử lý: [số] việc" title="Việc cần xử lý" style="position: relative; width: 44px; height: 44px; border-radius: 999px; border: 1px solid #EADFDC; background: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; color: #6E1423; text-decoration: none">
+        <svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"></path><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"></path></svg>
+        <span style="position: absolute; top: -4px; right: -6px; min-width: 22px; height: 22px; padding: 0 6px; border-radius: 999px; background: #B42318; color: #FFFFFF; font-size: 11px; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; border: 2px solid #FFFFFF; box-sizing: border-box">[số]</span>
+      </a>
+      <span style="display: inline-flex; align-items: center; height: 32px; padding: 0 12px; border-radius: 999px; background: #F6ECEA; color: #5E1320; font-size: 13px; font-weight: 600">Kho Hà Nội</span>
+      <div style="display: flex; flex-direction: column; align-items: flex-end">
+        <span style="font-size: 14px; font-weight: 600">[Họ tên]</span>
+        <span style="font-size: 12px; color: #6B5559">Nhân viên kho</span>
+      </div>
+      <a href="Auth_DoiMatKhau.dc.html" style="height: 40px; padding: 0 14px; border-radius: 8px; border: 1px solid #DCCAC6; background: #FFFFFF; color: #241417; font-size: 14px; text-decoration: none; display: inline-flex; align-items: center; box-sizing: border-box">Đổi mật khẩu</a>
+      <button type="button" style="height: 40px; padding: 0 14px; border-radius: 8px; border: 0; background: #6E1423; color: #FFFFFF; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer">Đăng xuất</button>
+    </div>
+  </header>
+  <div style="display: flex; flex-wrap: wrap; flex: 1 1 auto">
+    <nav aria-label="Menu chính" style="flex: 1 1 240px; max-width: 280px; background: #4A0E1A; padding: 20px 12px; display: flex; flex-direction: column; gap: 4px">
+      <sc-for list="{{menu}}" as="g" hint-placeholder-count="5">
+        <div style="display: flex; flex-direction: column; gap: 2px; margin-bottom: 14px">
+          <sc-if value="{{g.title}}" hint-placeholder-val="{{true}}">
+            <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.08em; color: #D9B8B3; padding: 6px 12px">{{g.title}}</span>
+          </sc-if>
+          <sc-for list="{{g.items}}" as="it" hint-placeholder-count="2">
+            <a href="{{it.href}}" style="{{it.style}}">{{it.label}}</a>
+          </sc-for>
+        </div>
+      </sc-for>
+    </nav>
+    <main style="position: relative; flex: 999 1 560px; min-width: 0; padding: 32px 36px; display: flex; flex-direction: column; gap: 20px">
+      <div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px">
+        <div style="display: flex; flex-direction: column; gap: 6px">
+          <span style="font-size: 13px; color: #6B5559">Nhập kho / <a href="NVK_PhieuNhap.dc.html">Phiếu nhập kho</a> / Nhập mới</span>
+          <h1 style="margin: 0; font-size: 28px; font-weight: 700">Nhập kho</h1>
+          <p style="margin: 0; font-size: 14px; color: #6B5559">Chọn loại nhập, chọn chứng từ gốc rồi nhập số lượng thực nhận.</p>
+        </div>
+      </div>
+      <div role="tablist" aria-label="Loại nhập" style="display: flex; flex-wrap: wrap; gap: 8px">
+        <sc-for list="{{loaiTabs}}" as="t" hint-placeholder-count="3">
+          <a href="{{t.href}}" role="tab" aria-selected="{{t.sel}}" style="{{t.style}}">{{t.label}}</a>
+        </sc-for>
+      </div>
+        <sc-if value="{{isNcc}}" hint-placeholder-val="{{true}}">
+          <section aria-labelledby="s1" style="display: flex; flex-direction: column; gap: 14px; padding: 20px; border-radius: 12px; background: #FFFFFF; border: 1px solid #EADFDC">
+            <h2 id="s1" style="margin: 0; font-size: 16px; font-weight: 600">Đơn đặt hàng đang chờ nhận</h2>
+            <form style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px">
+              <label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 500; flex: 1 1 260px">Tìm đơn <input type="search" placeholder="Mã đơn, nhà cung cấp" style="height: 44px; padding: 0 12px; border-radius: 8px; border: 1px solid #DCCAC6; font: inherit; font-size: 14px; color: #241417; background: #FFFFFF"></label>
+            </form>
+            <div style="overflow-x: auto">
+              <sc-raw-table style="width: 100%; min-width: 860px; border-collapse: collapse; font-size: 14px">
+                <sc-raw-thead><sc-raw-tr style="background: #F6ECEA; text-align: left"><sc-raw-th scope="col" style="padding: 12px 16px; font-weight: 600; color: #5E1320">Mã đơn</sc-raw-th><sc-raw-th scope="col" style="padding: 12px 16px; font-weight: 600; color: #5E1320">Nhà cung cấp</sc-raw-th><sc-raw-th scope="col" style="padding: 12px 16px; font-weight: 600; color: #5E1320">Dự kiến nhận đủ</sc-raw-th><sc-raw-th scope="col" style="padding: 12px 16px; font-weight: 600; color: #5E1320; text-align: right">Đã nhận / Đặt</sc-raw-th><sc-raw-th scope="col" style="padding: 12px 16px; font-weight: 600; color: #5E1320; text-align: right">Số lần đã giao</sc-raw-th><sc-raw-th scope="col" style="padding: 12px 16px; font-weight: 600; color: #5E1320"></sc-raw-th><sc-raw-th scope="col" style="padding: 12px 16px; font-weight: 600; color: #5E1320"></sc-raw-th></sc-raw-tr></sc-raw-thead>
+                <sc-raw-tbody>
+                  <sc-for list="{{orders}}" as="o" hint-placeholder-count="4">
+                    <sc-raw-tr style="border-top: 1px solid #F0E6E3">
+                      <sc-raw-td style="padding: 12px 16px; font-weight: 600">[mã đơn]</sc-raw-td>
+                      <sc-raw-td style="padding: 12px 16px">[Nhà cung cấp]</sc-raw-td>
+                      <sc-raw-td style="padding: 12px 16px">[dd/mm/yyyy]</sc-raw-td>
+                      <sc-raw-td style="padding: 12px 16px; text-align: right">[số] / [số]</sc-raw-td>
+                      <sc-raw-td style="padding: 12px 16px; text-align: right">{{o.times}}</sc-raw-td>
+                      <sc-raw-td style="padding: 12px 16px"><sc-if value="{{o.review}}" hint-placeholder-val="{{false}}"><span style="display: inline-flex; padding: 4px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; border: 1px solid #B45309; color: #8A4B08">Cần xem xét</span></sc-if></sc-raw-td>
+                      <sc-raw-td style="padding: 12px 16px; text-align: right"><a href="NVK_NhapNCC.dc.html" style="display: inline-flex; align-items: center; height: 40px; padding: 0 16px; border-radius: 8px; background: #8B1E2D; color: #FFFFFF; font-size: 14px; font-weight: 600; text-decoration: none">Nhập hàng</a></sc-raw-td>
+                    </sc-raw-tr>
+                  </sc-for>
+                </sc-raw-tbody>
+              </sc-raw-table>
+            </div>
+          </section>
+        </sc-if>
+        <sc-if value="{{isReturn}}" hint-placeholder-val="{{false}}">
+          <section aria-labelledby="s1b" style="display: flex; flex-direction: column; gap: 14px; padding: 20px; border-radius: 12px; background: #FFFFFF; border: 1px solid #EADFDC">
+            <h2 id="s1b" style="margin: 0; font-size: 16px; font-weight: 600">{{srcTitle}}</h2>
+            <sc-if value="{{isKhach}}" hint-placeholder-val="{{false}}">
+              <form style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px">
+                <label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 500; flex: 2 1 280px">Tìm theo mã đơn bán hoặc khách hàng <input type="search" placeholder="Mã đơn bán, tên hoặc SĐT khách hàng" style="height: 44px; padding: 0 12px; border-radius: 8px; border: 1px solid #DCCAC6; font: inherit; font-size: 14px; color: #241417; background: #FFFFFF"></label>
+                <button type="button" style="height: 44px; padding: 0 18px; border-radius: 8px; border: 1px solid #8B1E2D; background: #FFFFFF; color: #8B1E2D; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer">Tìm</button>
+              </form>
+            </sc-if>
+            <div style="overflow-x: auto">
+              <sc-raw-table style="width: 100%; min-width: 860px; border-collapse: collapse; font-size: 14px">
+                <sc-raw-thead><sc-raw-tr style="background: #F6ECEA; text-align: left"><sc-raw-th scope="col" style="padding: 12px 16px; font-weight: 600; color: #5E1320; width: 48px"><span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Chọn</span></sc-raw-th><sc-raw-th scope="col" style="padding: 12px 16px; font-weight: 600; color: #5E1320">Phiếu xuất</sc-raw-th><sc-raw-th scope="col" style="padding: 12px 16px; font-weight: 600; color: #5E1320">Đơn bán</sc-raw-th><sc-raw-th scope="col" style="padding: 12px 16px; font-weight: 600; color: #5E1320">Khách hàng</sc-raw-th><sc-raw-th scope="col" style="padding: 12px 16px; font-weight: 600; color: #5E1320">Ngày xuất kho</sc-raw-th><sc-raw-th scope="col" style="padding: 12px 16px; font-weight: 600; color: #5E1320">{{srcCol}}</sc-raw-th></sc-raw-tr></sc-raw-thead>
+                <sc-raw-tbody>
+                  <sc-for list="{{slips}}" as="o" hint-placeholder-count="3">
+                    <sc-raw-tr sc-camel-on-click="{{o.pick}}" style="border-top: 1px solid #F0E6E3; cursor: pointer; {{o.bg}}">
+                      <sc-raw-td style="padding: 12px 16px"><input type="radio" name="px" aria-label="Chọn phiếu xuất" checked="{{o.on}}" style="width: 20px; height: 20px; accent-color: #8B1E2D"></sc-raw-td>
+                      <sc-raw-td style="padding: 12px 16px; font-weight: 600">[mã phiếu xuất]</sc-raw-td>
+                      <sc-raw-td style="padding: 12px 16px">[mã đơn bán]</sc-raw-td>
+                      <sc-raw-td style="padding: 12px 16px">[Khách hàng]</sc-raw-td>
+                      <sc-raw-td style="padding: 12px 16px">[dd/mm/yyyy]</sc-raw-td>
+                      <sc-raw-td style="padding: 12px 16px; color: #3B2A2D; font-size: 13px">{{o.info}}</sc-raw-td>
+                    </sc-raw-tr>
+                  </sc-for>
+                </sc-raw-tbody>
+              </sc-raw-table>
+            </div>
+          </section>
+          <section aria-labelledby="s2b" style="display: flex; flex-direction: column; gap: 14px; padding: 20px; border-radius: 12px; background: #FFFFFF; border: 1px solid #EADFDC">
+            <h2 id="s2b" style="margin: 0; font-size: 16px; font-weight: 600">2. Xử lý hàng của phiếu xuất [mã]</h2>
+            <div role="radiogroup" aria-label="Cách xử lý" style="display: flex; flex-wrap: wrap; gap: 10px">
+              <sc-for list="{{modes}}" as="md" hint-placeholder-count="2">
+                <button type="button" role="radio" aria-checked="{{md.sel}}" sc-camel-on-click="{{md.on}}" style="{{md.style}}">{{md.label}}</button>
+              </sc-for>
+            </div>
+            <sc-if value="{{doImport}}" hint-placeholder-val="{{true}}">
+              <div style="overflow-x: auto">
+                <sc-raw-table style="width: 100%; min-width: 760px; border-collapse: collapse; font-size: 14px">
+                  <sc-raw-thead><sc-raw-tr style="background: #F6ECEA; text-align: left"><sc-raw-th scope="col" style="padding: 12px 16px; font-weight: 600; color: #5E1320">Sản phẩm</sc-raw-th><sc-raw-th scope="col" style="padding: 12px 16px; font-weight: 600; color: #5E1320">Lô</sc-raw-th><sc-raw-th scope="col" style="padding: 12px 16px; font-weight: 600; color: #5E1320; text-align: right">Đã xuất</sc-raw-th><sc-raw-th scope="col" style="padding: 12px 16px; font-weight: 600; color: #5E1320; text-align: right">SL thực nhận</sc-raw-th></sc-raw-tr></sc-raw-thead>
+                  <sc-raw-tbody>
+                    <sc-for list="{{retLines}}" as="l" hint-placeholder-count="3">
+                      <sc-raw-tr style="border-top: 1px solid #F0E6E3">
+                        <sc-raw-td style="padding: 12px 16px; font-weight: 500">[Tên sản phẩm]</sc-raw-td>
+                        <sc-raw-td style="padding: 12px 16px">[mã lô] · HSD [dd/mm/yyyy]</sc-raw-td>
+                        <sc-raw-td style="padding: 12px 16px; text-align: right">[số]</sc-raw-td>
+                        <sc-raw-td style="padding: 12px 16px; text-align: right"><input aria-label="Số lượng thực nhận" type="number" placeholder="0" style="height: 40px; padding: 0 8px; border-radius: 8px; border: 1px solid #DCCAC6; font: inherit; font-size: 14px; color: #241417; background: #FFFFFF; width: 100px; text-align: right"></sc-raw-td>
+                      </sc-raw-tr>
+                    </sc-for>
+                  </sc-raw-tbody>
+                </sc-raw-table>
+              </div>
+              <label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 500">{{reasonLabel}} * <textarea rows="2" style="padding: 10px 12px; border-radius: 8px; border: 1px solid #DCCAC6; font: inherit; font-size: 14px; resize: vertical"></textarea></label>
+              <label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 500">Ghi chú xử lý hoàn <textarea rows="2" placeholder="Bắt buộc ghi rõ nếu nhận lại ít hơn số đã xuất. VD: 2 chai vỡ khi vận chuyển về" style="padding: 10px 12px; border-radius: 8px; border: 1px solid #DCCAC6; font: inherit; font-size: 14px; resize: vertical"></textarea></label>
+              <span style="font-size: 13px; color: #6B5559">Hàng nhập lại vào đúng lô đã xuất. Số thực nhận không vượt số đã xuất. Phần chênh giữa số đã xuất và số nhận lại được tính là hàng mất, không tạo chứng từ riêng.</span>
+            </sc-if>
+            <sc-if value="{{noImport}}" hint-placeholder-val="{{false}}">
+              <label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 500">Lý do không nhập kho * <sc-raw-select style="height: 44px; padding: 0 12px; border-radius: 8px; border: 1px solid #DCCAC6; font: inherit; font-size: 14px; color: #241417; background: #FFFFFF"><option>Hỏng hoặc vỡ</option><option>Nghi ngờ chất lượng</option><option>Sai lô hoặc vintage</option><option>Không nhận được hàng hoàn</option><option>Khác</option></sc-raw-select></label>
+              <label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 500">Ghi chú <textarea rows="2" style="padding: 10px 12px; border-radius: 8px; border: 1px solid #DCCAC6; font: inherit; font-size: 14px; resize: vertical"></textarea></label>
+              <div style="display: flex; flex-direction: column; gap: 6px; padding: 12px 16px; border-radius: 10px; background: #FDF6EA; border: 1px solid #F0D9B0; font-size: 13px; color: #3B2A2D">
+                <b>Khi bấm "Xác nhận không nhập kho":</b>
+                <span>• Không tạo phiếu nhập, tồn kho không thay đổi.</span>
+                <span>• Phiếu xuất [mã] được ghi "Đã xử lý – không nhập kho" kèm lý do, thời điểm và người xử lý.</span>
+                <span>• Phiếu xuất biến khỏi danh sách chờ xử lý hoàn và không xử lý lại được.</span>
+              </div>
+            </sc-if>
+          </section>
+        </sc-if>
+      <div style="display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px">
+        <sc-if value="{{doImportAny}}" hint-placeholder-val="{{true}}">
+          <button type="button" style="height: 44px; padding: 0 18px; border-radius: 8px; border: 0; background: #F6E1E1; color: #8B1E2D; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; margin-right: auto">Xóa phiếu</button>
+          <button type="button" style="height: 44px; padding: 0 18px; border-radius: 8px; border: 1px solid #8B1E2D; background: #FFFFFF; color: #8B1E2D; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer">Lưu</button>
+          <button type="button" style="height: 44px; padding: 0 18px; border-radius: 8px; border: 0; background: #8B1E2D; color: #FFFFFF; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer">Xác nhận nhập kho</button>
+        </sc-if>
+        <sc-if value="{{noImport}}" hint-placeholder-val="{{false}}">
+          <button type="button" style="height: 44px; padding: 0 18px; border-radius: 8px; border: 0; background: #8B1E2D; color: #FFFFFF; font: inherit; font-size: 14px; font-weight: 600; cursor: pointer">Xác nhận không nhập kho</button>
+        </sc-if>
+      </div>
+      <span style="{{footStyle}}">Lưu: phiếu ở trạng thái Đang cập nhật, tồn kho chưa đổi. Xác nhận nhập kho: cộng tồn; bị chặn nếu lô đang thuộc phiếu kiểm kê chưa hoàn tất.</span>
+    </main>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;loai&quot;: {&quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;Nhập từ NCC&quot;, &quot;Khách trả hàng&quot;, &quot;Hoàn giao thất bại&quot;], &quot;default&quot;: &quot;Nhập từ NCC&quot;}, &quot;$preview&quot;: {&quot;width&quot;: 1440, &quot;height&quot;: 1300}}">
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { pick: 0, last: false, rows: [{ p: 0, lot: '[mã lô có sẵn]', loss: '' }, { p: 0, lot: '', loss: '2' }, { p: 1, lot: '', loss: '' }], mode: 'in' }; }
+  renderVals() {
+    var a = 'nhap';
+    var self = this;
+    var base = 'display: flex; align-items: center; min-height: 40px; padding: 0 12px; border-radius: 8px; font-size: 14px; text-decoration: none; ';
+    function m(label, key, href) { return { label: label, href: href || '#', style: base + (key === a ? 'background: #8B1E2D; color: #FFFFFF; font-weight: 600' : 'color: #F3E4E1') }; }
+    var pill = 'display: inline-flex; padding: 4px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; white-space: nowrap; ';
+    var tabBase = 'height: 40px; padding: 0 14px; border-radius: 999px; font: inherit; font-size: 14px; cursor: pointer; ';
+    function t(label, sel, on) { return { label: label, count: '([số])', on: on || function () {}, sel: sel ? 'true' : 'false', style: tabBase + (sel ? 'border: 0; background: #6E1423; color: #FFFFFF; font-weight: 600' : 'border: 1px solid #DCCAC6; background: #FFFFFF; color: #241417') }; }
+    var loai = this.props.loai ?? 'Nhập từ NCC';
+    var isNcc = loai === 'Nhập từ NCC', isKhach = loai === 'Khách trả hàng', isReturn = !isNcc;
+    var LT = [['Nhập từ NCC', 'NVK_NhapKho.dc.html'], ['Khách trả hàng', 'NVK_NhapKho_KhachTra.dc.html'], ['Hoàn giao thất bại', 'NVK_NhapKho_HoanGiao.dc.html']];
+    var pick = this.state.pick;
+    function sel(i) { return function () { self.setState({ pick: i }); }; }
+    var orders = [[2, true], [0, false], [1, false], [0, false]].map(function (o, i) { return { times: o[0], review: o[1], on: i === pick, bg: i === pick ? 'background: #FCF7F6' : '', pick: sel(i) }; });
+    var slips = [0, 1, 2].map(function (i) { return { on: i === pick, bg: i === pick ? 'background: #FCF7F6' : '', pick: sel(i),
+      info: isKhach ? 'Giao thành công [dd/mm/yyyy]' : 'Thất bại: [lý do giao thất bại]' }; });
+    var names = ['[Sản phẩm A – 2018 – 750 ml]', '[Sản phẩm B – NV – 750 ml]', '[Sản phẩm C – 2020 – 1.5 L]'];
+    var rcv = this.state.rows.map(function (r, i) {
+      var known = r.lot !== '';
+      return { name: names[r.p], lot: r.lot, loss: r.loss, hasLoss: Number(r.loss) > 0,
+        dateStyle: 'height: 40px; padding: 0 8px; border-radius: 8px; border: 1px solid #DCCAC6; font: inherit; font-size: 14px; ' + (known ? 'background: #F6F1EF; color: #6B5559' : 'background: #FFFFFF; color: #241417'),
+        onLoss: function (e) { var n = self.state.rows.slice(); n[i] = Object.assign({}, n[i], { loss: e.target.value }); self.setState({ rows: n }); },
+        remove: function () { self.setState({ rows: self.state.rows.filter(function (_, j) { return j !== i; }) }); } };
+    });
+    var mode = this.state.mode;
+    var mb = 'height: 44px; padding: 0 18px; border-radius: 8px; font: inherit; font-size: 14px; cursor: pointer; ';
+    function md(label, key) { var s = mode === key; return { label: label, sel: s ? 'true' : 'false', on: function () { self.setState({ mode: key }); }, style: mb + (s ? 'border: 2px solid #8B1E2D; background: #FCF7F6; color: #6E1423; font-weight: 600' : 'border: 1px solid #DCCAC6; background: #FFFFFF; color: #241417') }; }
+    var tb = 'height: 40px; padding: 0 16px; border-radius: 999px; font-size: 14px; text-decoration: none; display: inline-flex; align-items: center; ';
+    return {
+      loaiTabs: LT.map(function (x) { var s = x[0] === loai; return { label: x[0], href: x[1], sel: s ? 'true' : 'false', style: tb + (s ? 'background: #6E1423; color: #FFFFFF; font-weight: 600' : 'border: 1px solid #DCCAC6; background: #FFFFFF; color: #241417') }; }),
+      isNcc: isNcc, isReturn: isReturn, isKhach: isKhach,
+      orders: orders, products: names, rcv: rcv, last: this.state.last,
+      addRow: function () { self.setState({ rows: self.state.rows.concat([{ p: 2, lot: '', loss: '' }]) }); },
+      toggleLast: function () { self.setState({ last: !self.state.last }); },
+      slips: slips, retLines: [{}, {}],
+      srcTitle: isKhach ? '1. Tìm phiếu xuất của đơn khách trả' : '1. Chọn phiếu xuất giao thất bại chưa xử lý',
+      srcCol: isKhach ? 'Kết quả giao' : 'Lý do giao thất bại',
+      reasonLabel: isKhach ? 'Lý do khách trả hàng' : 'Lý do hàng hoàn về',
+      modes: [md('Nhập lại kho', 'in'), md('Không nhập kho', 'out')],
+      doImport: !isReturn || mode === 'in', noImport: isReturn && mode === 'out',
+      doImportAny: isReturn && mode === 'in', footStyle: 'font-size: 13px; color: #6B5559; text-align: right; ' + (isReturn && mode === 'in' ? '' : 'display: none'),
+      menu: [
+        { title: '', items: [m('Trang chủ', 'home', 'NVK_TrangChu.dc.html')] },
+        { title: 'NHẬP KHO', items: [m('Phiếu nhập kho', 'nhap', 'NVK_PhieuNhap.dc.html')] },
+        { title: 'XUẤT KHO', items: [m('Phiếu xuất kho', 'xuat', 'NVK_PhieuXuat.dc.html')] },
+        { title: 'KIỂM KÊ', items: [m('Phiếu kiểm kê', 'kk', 'NVK_KiemKe.dc.html')] }
+      ]
+    };
+  }
+}
+</script>
+
+
+</body></html>

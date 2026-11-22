@@ -31,6 +31,11 @@ class ChiTietPhieuXuat extends ChiTietModel
         return $this->belongsTo(Lo::class, 'Ma_lo_thuc_xuat', 'Ma_lo');
     }
 
+    public function lo(): BelongsTo
+    {
+        return $this->loThucXuat();
+    }
+
     public function nguoiDoiLo(): BelongsTo
     {
         return $this->belongsTo(NguoiDung::class, 'Ma_nguoi_doi_lo', 'Ma_nguoi_dung');

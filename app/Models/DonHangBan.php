@@ -32,6 +32,11 @@ class DonHangBan extends Model
         return $this->belongsTo(NguoiDung::class, 'Ma_nguoi_lap', 'Ma_nguoi_dung');
     }
 
+    public function nguoiTao(): BelongsTo
+    {
+        return $this->belongsTo(NguoiDung::class, 'Ma_nguoi_lap', 'Ma_nguoi_dung');
+    }
+
     public function chiTiets(): HasMany
     {
         return $this->hasMany(ChiTietDonBan::class, 'Ma_don_hang_ban', 'Ma_don_hang_ban');
