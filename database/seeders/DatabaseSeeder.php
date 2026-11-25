@@ -401,6 +401,9 @@ class DatabaseSeeder extends Seeder
             );
         }
 
+        // 8b. Nạp dữ liệu thực tế (70 vang Chile/Ý/Pháp, 13 NCC, 20 KH B2B, 33 lô, lịch sử 6 tháng & kịch bản demo)
+        $this->call(RealDataSeeder::class);
+
         // 9. Dữ liệu chứng từ mẫu chờ xử lý (Action Items cho Demo chuông thông báo)
         // 9.1. Đề xuất chờ duyệt cho Kế toán (ketoan01: chuông +1)
         $ddh = \App\Models\DonDatHang::updateOrCreate(
@@ -445,6 +448,7 @@ class DatabaseSeeder extends Seeder
         );
 
         // 9.2. Đơn bán & Phiếu xuất đang chuẩn bị hàng (Kinh doanh: +1, Nhân viên kho: +1)
+        // Dùng SP0006 (lô L2401 sắp hết hạn) để không ảnh hưởng tồn khả dụng test của SP0001
         $dhb = \App\Models\DonHangBan::updateOrCreate(
             ['Ma_don_hang_ban' => 'DB-2026-0001'],
             [
@@ -455,15 +459,15 @@ class DatabaseSeeder extends Seeder
                 'Ten_nguoi_nhan' => 'Nhà hàng Sen Tây Hồ',
                 'Sdt_nguoi_nhan' => '02437199242',
                 'Dia_chi_giao_hang' => '614 Lạc Long Quân, Tây Hồ, Hà Nội',
-                'Tong_tien_hang' => 2400000,
+                'Tong_tien_hang' => 1260000,
                 'Trang_thai' => 'Đang chuẩn bị hàng',
             ]
         );
         \App\Models\ChiTietDonBan::updateOrCreate(
-            ['Ma_don_hang_ban' => 'DB-2026-0001', 'Ma_san_pham' => 'SP0001'],
+            ['Ma_don_hang_ban' => 'DB-2026-0001', 'Ma_san_pham' => 'SP0006'],
             [
-                'So_luong' => 2,
-                'Don_gia_ban' => 1200000,
+                'So_luong' => 6,
+                'Don_gia_ban' => 210000,
                 'Chiet_khau' => 0,
             ]
         );
@@ -478,12 +482,12 @@ class DatabaseSeeder extends Seeder
         \App\Models\ChiTietPhieuXuat::updateOrCreate(
             [
                 'Ma_phieu_xuat' => 'PX-2026-0001',
-                'Ma_lo_phan_bo' => 'L2201',
-                'Ma_lo_thuc_xuat' => 'L2201',
+                'Ma_lo_phan_bo' => 'L2401',
+                'Ma_lo_thuc_xuat' => 'L2401',
             ],
             [
-                'So_luong' => 2,
-                'Gia_von_xuat' => 800000,
+                'So_luong' => 6,
+                'Gia_von_xuat' => 137000,
             ]
         );
 
